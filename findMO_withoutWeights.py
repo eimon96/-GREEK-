@@ -4,14 +4,13 @@ def main():
     try:
         fp = open('meta.txt', 'r', encoding='utf-8')
         grades = getGrades(fp)
+        mo = getMO(grades)
+        print("Mesos Oros: {:4.3}".format(mo))
         fp.close()
     except FileNotFoundError:
         print("File Not Found.")
     except:
         print("An error occurred")
-
-    mo = getMO(grades)
-    print("Mesos Oros: {:4.3}".format(mo))
 
 
 
